@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <nuxt-link to="/teacher">跳转</nuxt-link>
+    {{ $route.params.id }}学生
   </section>
 </template>
 
@@ -8,6 +8,10 @@
 export default {
   data(){
     return{}
+  },
+  validate(value){
+    // return /^\d+$/.test(value.params.id)
+    return true
   }
 }
 </script>
